@@ -1,0 +1,13 @@
+p2.l:
+
+
+En el archivo, es importante agregar las librerías con las funciones que se utilizarán aunque se ha removido liby.a y deber'ian estar todas las que viene con bison automaticamente. También se debe declarar la opción yylineno para tener acceso a la línea del archivo en todo momento. La cabecera del XML, los delimitadores y los espacios en blanco deben seguir un formato específico, donde el espacio en blanco se define como una secuencia de uno o más espacios o saltos de línea.
+Se establece que los comentarios son cualquier secuencia de caracteres entre <!-- y -->, y que las etiquetas son secuencias de caracteres alfanuméricos entre < > o </ >, dependiendo de si se trata de una etiqueta inicial o final. Se debe ignorar tanto los comentarios como el espacio en blanco, ya que no son relevantes. Para la cabecera y las etiquetas, se indica al analizador sintáctico que las devuelva cuando se reconozcan. Cualquier otro caso no reconocido no se tendrá en cuenta.
+
+
+p2.y:
+
+Primero se verifica si la cabecera está colocada en la posición correcta al principio del archivo. Si no es así, se informa de un error debido a que no está en el formato esperado o porque no se ha colocado al principio.
+Luego se comprueba si hay una o varias líneas de código antes de un bloque o si solo hay un bloque. En la sección de bloque, se comparan los dos tags para determinar si tienen el mismo nombre. Esto se hace tanto para bloques anidados como para bloques independientes. Si no se encuentra un tag final correspondiente a un tag inicial previamente identificado, se indica que falta el tag final y se muestra la línea donde el analizador se detuvo sin encontrarlo. En estos casos de error, el analizador se detiene y no continúa.
+
+Cabe destacar que el contenido de los bloques no se tiene en cuenta a menos que se trate de otro bloque. Por lo tanto, si se coloca un símbolo < o > dentro del bloque sin seguir la estructura y formato de tags correctos, el analizador lo considerará como parte del texto, siempre y cuando haya una estructura y formato de tags correctos como se muestra en el ejemplo4 dandolo como correcto.

@@ -1,0 +1,9 @@
+En el codigo que he hecho para la asignatura,alumno Xabier Jimenez Gpmez,comenzamos inicializando las variables que serviran como contadores de los distintos tipos que tiene que detectar nuestra practica con un valor igual a 0 que posteriormente se ira incrementando a medida que avancemos.
+
+A continuación se presentan las declaraciones utilizadas en el programa. En primer lugar, se define una palabra como una secuencia de caracteres no vacía que no incluye espacios, tabulaciones, saltos de línea ni puntos. En las reglas del programa, se utiliza esta definición para agregar una palabra al resultado cada vez que se reconoce una y se incluye el número de caracteres que la componen.
+Posteriormente, se definen las letras mayúsculas y minúsculas, y en las reglas se indica que cada secuencia de caracteres que contenga únicamente uno de estos tipos de letra debe contarse como una palabra mayúscula o minúscula, según corresponda. Además, se incluye una palabra genérica y se agrega el número de caracteres al resultado.
+Lo mismo se aplica para los números del 0 al 9 , donde se hace que se ignoren los delimitadores para que no se incluyan en el resultado final, excepto el salto de línea, que solo se utiliza para contar el número de líneas en el texto.
+Finalmente, cuando el programa detecta un punto, además de contabilizarlo como un caracter, también se agrega una frase al resultado del análisis.
+
+A mayores si el contador encuentra un caso no considerado simplemente lo incluye como caracter.
+La ultima linea escribe el resultado por consola.
